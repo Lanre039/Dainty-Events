@@ -1,0 +1,42 @@
+.topbar {
+    background-color: orangered;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.nav-btn {
+
+    border: none;
+    border-radius: none;
+    
+
+    background-color: #fff;
+    height: 2px;
+    width: 3.5rem;
+    margin-top: 3.25rem;
+    margin-left: 2rem;
+
+    &::before,
+    &::after {
+
+        background-color: #fff;
+        height: 2px;
+        width: 3.5rem;
+        content: "";
+        display: block;
+        position: absolute;
+        transition: all .2s;
+    }
+
+    &::before { transform: translateY(-1rem);}
+    &::after { transform: translateY(1rem);}
+
+}
+
