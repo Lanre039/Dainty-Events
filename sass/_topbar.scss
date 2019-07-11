@@ -1,42 +1,52 @@
 .topbar {
-    background-color: orangered;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-    width: 7rem;
-    height: 7rem;
+    
+    z-index: 2000;
+    padding: 0 15rem;
+    position: relative;
+    
+}
+.nav {
     position: fixed;
-    text-align: center;
     top: 0;
     right: 0;
-    cursor: pointer;
-    z-index: 2000;
-}
+    left: 0;
+    background-color: #fff;
 
-.nav-btn {
+    &__list {
 
-    border: none;
-    border-radius: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-decoration: none;
+        list-style: none;
+        
+    }
     
 
-    background-color: #fff;
-    height: 2px;
-    width: 3.5rem;
-    margin-top: 3.25rem;
-    margin-left: 2rem;
-
-    &::before,
-    &::after {
-
-        background-color: #fff;
-        height: 2px;
-        width: 3.5rem;
-        content: "";
+    &__link:link,
+    &__link:visited {
+        
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: orangered;
+        text-decoration: none;
+        font-family: inherit;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
         display: block;
-        position: absolute;
-        transition: all .2s;
+        z-index: 2000;
+        transition: all .3s;
     }
 
-    &::before { transform: translateY(-1rem);}
-    &::after { transform: translateY(1rem);}
+    &__link:hover,
+    &__link:active {
+        background-color: black;
+        color: #fff;
+        transition: all .3s;
+        //transform: translateY(-3px);
+    }
+    
 
 }
 
