@@ -16,6 +16,12 @@
     <header id="Home" class="header">
         <div class="topbar">
             <nav class="nav">
+                <ul class="nav__social-icons">
+                    <li><a href="#"><img src='img/Facebook.svg' /></a></li>
+                    <li><a href="#"><img src='img/Twitter.svg' /></a></li>
+                    <li><a href="#"><img src='img/YouTube.svg' /></a></li>
+                    <li><a href="#"><img src='img/Instagram.svg' /></a></li>
+                </ul>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#Home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#Services" class="nav__link">Services</a></li>
@@ -26,17 +32,19 @@
             </nav>
         </div>
         <div>
-            <h1>
-                <a href="index.html" class="header__01">Dainty Events</a>
-            </h1>
+            <div class="header__text">
+                <h1>
+                    <a href="index.html" class="header__format">Dainty Events</a>
+                </h1>
+            </div>
+            <img name="slide" class="slide">
+            <div class="header__details">
+                <h1 class="header__details--01">Give Your Events a Professional Touch</h1>
+                <h2 class="header__details--02">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </h2>
             </div>
         
-
-        <div class="header__content">
-            <h1 class="header__content--01">Give Your Events a Professional Touch</h1>
-            <h2 class="header__content--02">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            </h2>
         </div>
 
     </header>
@@ -101,7 +109,7 @@
 
     <section id="contact us" class="contact-us">
         <div class="contact-us-details">
-            <form action="#" class="form">
+            <form action="https://www.enformed.io/41qi9muq" class="form">
                 <div class="margin-format heading">
                     <h2 class="heading-secondary">
                         Contact us
@@ -109,23 +117,22 @@
                 </div>
             
                 <div class="form__group">
-                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                    <input name="name" type="text" class="form__input" placeholder="Full name" id="name" required>
                     <label for="name" class="form__label">Full name</label>
                 </div>
             
                 <div class="form__group">
-                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                    <input name="email" type="text" class="form__input" placeholder="Email address" id="email" required>
                     <label for="email" class="form__label">Email address</label>
                 </div>
             
-                <div class="form__group">
-                    
+                <div class="form__group">            
                     <textarea name="comment" cols="10" rows="4" class="form__input" placeholder="Comment" aria-invalid="false"></textarea>
 
                     <label for="name" class="form__label">Comment</label>
                 </div>
 
-                <button class="form__button">Send</button>
+                <button type="submit" class="form__button">Send</button>
                         
             </form>
             
@@ -141,12 +148,15 @@
         
 
     </section>
-
+    
     <div class="footer">
         <p class="copyright">
             &copy; Copyright 2019 Dainty Events. All Right Reserved.
             Designed By @rajilat1000gmail.com
         </p>
     </div>
+    
+    
+    <script src="script.js"></script>
 </body>
 </html>
