@@ -109,7 +109,7 @@
 
     <section id="contact us" class="contact-us">
         <div class="contact-us-details">
-            <form action="https://www.enformed.io/41qi9muq" class="form">
+            <form action="https://www.enformed.io/41qi9muq" method="post" class="form" onsubmit="handleSubmit(Contact)">
                 <div class="margin-format heading">
                     <h2 class="heading-secondary">
                         Contact us
@@ -122,14 +122,14 @@
                 </div>
             
                 <div class="form__group">
-                    <input name="email" type="text" class="form__input" placeholder="Email address" id="email" required>
+                    <input name="email" type="email" class="form__input" placeholder="Email address" id="email" required>
                     <label for="email" class="form__label">Email address</label>
                 </div>
             
                 <div class="form__group">            
-                    <textarea name="comment" cols="10" rows="4" class="form__input" placeholder="Comment" aria-invalid="false"></textarea>
+                    <textarea name="message" cols="10" rows="4" class="form__input" placeholder="Comment" aria-invalid="false"></textarea>
 
-                    <label for="name" class="form__label">Comment</label>
+                    <label for="message" class="form__label">Comment</label>
                 </div>
 
                 <button type="submit" class="form__button">Send</button>
