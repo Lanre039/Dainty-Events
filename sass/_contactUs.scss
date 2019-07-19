@@ -44,33 +44,66 @@
     margin-bottom: 2rem;
 }
 
-.form__input {
-    font-size: 1.5rem;
-    font-family: inherit;
-    color: inherit;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    background-color: rgba($color-primary, 0.2);
-    border: none;
-    border-bottom: 3px solid transparent;
-    width: 170%;
-    display: block;
-    transition: all .3s;
-}
+.form {
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        background-color: rgba($color-primary, 0.2);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 170%;
+        display: block;
+        transition: all .3s;
+    }
 
-.form__button {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    display: inline-block;
-    border-radius: .5rem;
-    transition: all, .2s;
-    position: relative;
-    font-size: 1.2rem;
-    font-weight: bold;
+    &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-grey-dark-1, .1);
+        border-bottom: 3px solid $color-primary;
+    }
 
-    background-color: $color-primary;
-    color: #fff;
-    border: none;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+    &:focus:invalid {
+        border-bottom: 3px solid $color-grey-dark-1;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-grey-dark-1;
+    }
+
+    &__label {
+        font-family: inherit;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 2rem;
+        margin-top: .5rem;
+        display: block;
+        transition: all .2s;
+        
+    }
+
+    &__input:placeholder-shown + &__label { // sibling selector
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__button {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: inline-block;
+        border-radius: .5rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: bold;
+    
+        background-color: $color-primary;
+        color: #fff;
+        border: none;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+    }
 }
