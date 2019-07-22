@@ -36,7 +36,4 @@ function handleSubmit(Contact) {
 handleSubmit(Contact);
 
 
-
-
-
  

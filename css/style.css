@@ -6,7 +6,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -145,6 +146,7 @@ body {
   transition: all, .3s; }
 
 .our-work {
+  overflow: scroll;
   background-color: #f9f7f6;
   padding: 5rem 5rem; }
   .our-work__layout {
@@ -178,6 +180,7 @@ body {
   right: 0;
   left: 0;
   background-color: #fff;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between; }
@@ -198,7 +201,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     text-decoration: none;
-    list-style: none; }
+    list-style: none;
+    white-space: nowrap; }
   .nav__item {
     padding-right: 1.5rem; }
   .nav__link:link, .nav__link:visited {
