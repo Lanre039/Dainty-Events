@@ -16,24 +16,31 @@ function changeImg(){
 
 window.onload = changeImg;
 
-function Contact(name, email, message) {
-    this.name = name;
-    this.email = email;
-    this.message = message;
+
+(function() {
+	scrollTo();
+})();
+
+function scrollTo() {
+	const links = document.querySelectorAll('.nav__link');
+	links.forEach(each => (each.onclick = scrollAnchors));
 }
 
-
-function handleSubmit(Contact) {
-    this.axios.post('http://www.enformed.io/41qi9muq', Contact)
-    .then((result) => {
-    console.log(result); 
-    })
-    .catch((error) => {
-        console.log(error);
-    })
+function scrollAnchors(e, respond = null) {
+	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+	e.preventDefault();
+	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+	const targetAnchor = document.querySelector(targetID);
+	if (!targetAnchor) return;
+	const originalTop = distanceToTop(targetAnchor);
+	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const checkIfDone = setInterval(function() {
+		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+		if (distanceToTop(targetAnchor) === 0 || atBottom) {
+			targetAnchor.tabIndex = '-1';
+			targetAnchor.focus();
+			window.history.pushState('', '', targetID);
+			clearInterval(checkIfDone);
+		}
+	}, 100);
 }
-
-handleSubmit(Contact);
-
-
- 
