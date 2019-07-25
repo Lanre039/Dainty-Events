@@ -8,11 +8,16 @@
     &__text {
         font-size: 4rem;
         font-weight: 300;
-        padding: 4rem 12px;
+        padding: 4rem 1.2rem;
         position: absolute;
-        top: 3;
         text-decoration: none;
         z-index: 20000;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0 1.2rem;
+            font-size: 3.5rem;
+            
+        }
     }
 
     &__format {
